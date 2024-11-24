@@ -11,7 +11,7 @@ Config.devMode = false -- Default: false / Do Not Run on a Live Server
 -- 0 = Cash Only
 -- 1 = Gold Only
 -- 2 = Both
-Config.currencyType = 2 -- Default: 2
+Config.currencyType = 0 -- Default: 2
 -----------------------------------------------------
 
 Config.keys = {
@@ -55,8 +55,8 @@ Config.commands = {
 -----------------------------------------------------
 
 -- Max Number of Horses per Player
-Config.maxPlayerHorses  = 5  -- Default: 5
-Config.maxTrainerHorses = 10 -- Default: 10
+Config.maxPlayerHorses  = 50  -- Default: 5
+Config.maxTrainerHorses = 100 -- Default: 10
 -----------------------------------------------------
 
 -- If Distance to Horse is too Far, Horse is Returned to Stable
@@ -83,8 +83,8 @@ Config.closedReturn = true -- Default: true / 'Return Horse' Button at Stable
 Config.death = {
     deselect = false,   -- Default: false / If true, Player Must Return to Stable to Select Horse to Spawn
     permanent = false,  -- Default: false / If true, Horse is Permanently Dead
-    health = 20,        -- Default: 20 / Health Level for First Spawn After Death
-    stamina = 20,       -- Default: 20 / Stamina Level for First Spawn After Death
+    health = 50,        -- Default: 20 / Health Level for First Spawn After Death
+    stamina = 50,       -- Default: 20 / Stamina Level for First Spawn After Death
 }
 -----------------------------------------------------
 
@@ -98,42 +98,42 @@ Config.allowWeapons     = true  -- Default: true / Allow Weapons
 Config.boost = {
 	brushHealth  = 10, -- Increase for Brushing Horse
 	brushStamina = 10,
-	feedHealth   = 20, -- Increase for Feeding Horse
-	feedStamina  = 20,
-    drinkHealth  = 20, -- Increase for Horse Drinking
-	drinkStamina = 20,
+	feedHealth   = 100, -- Increase for Feeding Horse
+	feedStamina  = 100,
+    drinkHealth  = 100, -- Increase for Horse Drinking
+	drinkStamina = 100,
 }
 -----------------------------------------------------
 
 -- Horse Drinking
-Config.drinkLength = 20 -- Default: 20 / Time in Seconds for Animation to Run
+Config.drinkLength = 10 -- Default: 20 / Time in Seconds for Animation to Run
 -----------------------------------------------------
 
 -- Places Horse Name Above Horse When Saddle is Empty
-Config.horseTag    = true -- Default: true / Set to false to disable
-Config.tagDistance = 15   -- Default: 15 / Distance from Horse the Tag is Visible
+Config.horseTag    = false -- Default: true / Set to false to disable
+Config.tagDistance = 5   -- Default: 15 / Distance from Horse the Tag is Visible
 -----------------------------------------------------
 
 -- Horse Training and Taming
-Config.trainerOnly = false -- Default: false / Only Trainers can Tame and Keep/Sell Wild Horses / Only Trainers can Train Horses
+Config.trainerOnly = true -- Default: false / Only Trainers can Tame and Keep/Sell Wild Horses / Only Trainers can Train Horses
 Config.trainerJob = {
 	{ name = 'trainer', grade = 0 },
 }
-Config.horseXpPerCheck  = 1    -- Default: 1 / XP Earned per 'trainingDistance' Achieved
-Config.horseXpPerBrush  = 1    -- Default: 1 / Set to 0 to Disable / Amount of XP Earned when Brushing Horse
-Config.horseXpPerFeed   = 1    -- Default: 1 / Set to 0 to Disable / Amount of XP Earned when Feeding Horse
-Config.horseXpPerDrink  = 1    -- Default: 1 / Set to 0 to Disable / Amount of XP Earned When Horse Drinks
+Config.horseXpPerCheck  = 100    -- Default: 1 / XP Earned per 'trainingDistance' Achieved
+Config.horseXpPerBrush  = 100    -- Default: 1 / Set to 0 to Disable / Amount of XP Earned when Brushing Horse
+Config.horseXpPerFeed   = 2000    -- Default: 1 / Set to 0 to Disable / Amount of XP Earned when Feeding Horse
+Config.horseXpPerDrink  = 100    -- Default: 1 / Set to 0 to Disable / Amount of XP Earned When Horse Drinks
 Config.showXpMessage    = true -- Default: true / Show XP Increase Message on Screen
 
 Config.displayHorseBreed = true -- Default: true / Display Breed of Horse Player Mounted
 
 Config.allowKeep  = true -- Default: true / Allow to Register Tamed Horse
-Config.regCost    = 25   -- Default: 25 / Cost of Registering a Tamed Horse
+Config.regCost    = 10   -- Default: 25 / Cost of Registering a Tamed Horse
 
 Config.allowSale      = true -- Default: true / Allow Player to Sell Tamed Horse
-Config.tamedSellPrice = 0.30 -- Default: 0.30 / Sell Price is 30% of Horse cashPrice in Stable
+Config.tamedSellPrice = 0.75 -- Default: 0.30 / Sell Price is 30% of Horse cashPrice in Stable
 Config.cooldown   = {
-    sellTame = 15,   -- Cooldown for Selling Tamed Horses in Minutes
+    sellTame = 0,   -- Cooldown for Selling Tamed Horses in Minutes
 }
 -----------------------------------------------------
 
@@ -141,7 +141,7 @@ Config.disableKick = false -- Default: false / Disable Kick from Horse
 -----------------------------------------------------
 
 -- Sell Price for Horse Purchased in Stable is 60% of Horse cashPrice
-Config.sellPrice = 0.70 -- Default: 0.70
+Config.sellPrice = 0.75 -- Default: 0.70
 -----------------------------------------------------
 
 Config.BlipColors = {
