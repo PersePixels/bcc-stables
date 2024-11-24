@@ -31,10 +31,10 @@ Config.keys = {
 
 -- Horse Items
 Config.horsebrush = 'horsebrush'
-Config.horsebrushDurability = true
+Config.horsebrushDurability = false
 
 Config.lantern = 'oil_lantern'
-Config.lanternDurability = true
+Config.lanternDurability = false
 
 Config.horseFood = {
 	'consumable_haycube',
@@ -47,10 +47,10 @@ Config.reviver = 'consumable_horse_reviver'
 
 -- Change / Translate Stables Commands
 Config.commands = {
-    horseRespawn = 'horseRespawn', -- Respawn Horse if Stuck or Unable to Reach
-    horseSetWild = 'horseSetWild', -- Dev Mode: Make a Horse Wild
-    horseWrithe  = 'horseWrithe',  -- Dev Mode: Set Horse to Writhe State
-    horseInfo    = 'horseInfo',    -- Display Additional Horse Info
+    horseRespawn = 'horserespawn', -- Respawn Horse if Stuck or Unable to Reach
+    horseSetWild = 'horsesetwild', -- Dev Mode: Make a Horse Wild
+    horseWrithe  = 'horsewrithe',  -- Dev Mode: Set Horse to Writhe State
+    horseInfo    = 'horseinfo',    -- Display Additional Horse Info
 }
 -----------------------------------------------------
 
@@ -96,8 +96,8 @@ Config.allowWeapons     = true  -- Default: true / Allow Weapons
 
 -- Health and Stamina Boosts (Set to 0 to Disable Boost - Animations Still Work)
 Config.boost = {
-	brushHealth  = 10, -- Increase for Brushing Horse
-	brushStamina = 10,
+	brushHealth  = 100, -- Increase for Brushing Horse
+	brushStamina = 100,
 	feedHealth   = 100, -- Increase for Feeding Horse
 	feedStamina  = 100,
     drinkHealth  = 100, -- Increase for Horse Drinking
@@ -115,7 +115,7 @@ Config.tagDistance = 5   -- Default: 15 / Distance from Horse the Tag is Visible
 -----------------------------------------------------
 
 -- Horse Training and Taming
-Config.trainerOnly = true -- Default: false / Only Trainers can Tame and Keep/Sell Wild Horses / Only Trainers can Train Horses
+Config.trainerOnly = false -- Default: false / Only Trainers can Tame and Keep/Sell Wild Horses / Only Trainers can Train Horses
 Config.trainerJob = {
 	{ name = 'trainer', grade = 0 },
 }
