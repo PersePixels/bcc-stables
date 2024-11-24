@@ -516,6 +516,7 @@ function SpawnHorse(data)
         Citizen.InvokeNative(0x1913FE4CBF41C463, MyHorse, 312, true) -- DisableHorseGunshotFleeResponse
     end
     Citizen.InvokeNative(0x1913FE4CBF41C463, MyHorse, 297, true) -- ForceInteractionLockonOnTargetPed / Allow to Lead Horse
+    Citizen.InvokeNative(0x1913FE4CBF41C463, playerPed, 560, true)
     Citizen.InvokeNative(0x1913FE4CBF41C463, MyHorse, 471, Config.disableKick) -- DisableHorseKick
 
     Citizen.InvokeNative(0xE2487779957FE897, MyHorse, 528) -- SetTransportUsageFlags
@@ -1862,7 +1863,7 @@ function StartPrompts()
     PromptSetText(LootHorse, CreateVarString(10, 'LITERAL_STRING', _U('lootHorsePrompt')))
     PromptSetVisible(LootHorse, true)
     PromptSetEnabled(LootHorse, true)
-    PromptSetStandardMode(LootHorse)
+    PromptSetStandardMode(LootHorse,true)
     PromptSetGroup(LootHorse, LootGroup, 0)
     PromptRegisterEnd(LootHorse)
 end
